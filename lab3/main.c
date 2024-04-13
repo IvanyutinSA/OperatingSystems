@@ -59,6 +59,7 @@ int main()
     display(hout, "File was openned successfully", 29, FOREGROUND_GREEN);
     ReadFile(h, buffer, 300, &actlen, NULL);
     display(hout, buffer, actlen-1, FOREGROUND_BLUE);
+    CloseHandle(h);
 
     getchar();
 }

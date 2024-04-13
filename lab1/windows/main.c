@@ -6,7 +6,9 @@ int main()
 {
     HANDLE hout, hin;
     DWORD actlen, readed;
+
     char buffer[100];
+    BOOL rc;
     actlen = strlen(buffer);
 
     hin = GetStdHandle(STD_INPUT_HANDLE);
@@ -21,7 +23,10 @@ int main()
     fflush(stdout);
 
     WriteFile(hout, "Enter the text\n", 15, NULL, NULL);
-    ReadFile(hin, buffer + actlen, 100, &readed, NULL);
+    rc = ReadFile(hin, buffer + actlen, 100, &readed, NULL);
+    if (!rc)
+        return 1;
+
     actlen += readed;
     WriteFile(hout, "This text was entered: ", 23, NULL, NULL);
     WriteFile(hout, buffer, actlen, NULL, NULL);
