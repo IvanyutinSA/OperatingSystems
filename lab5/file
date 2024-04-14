@@ -1,0 +1,7 @@
+dwMousePosition
+A COORD structure that contains the location of the cursor, in terms of the console screen buffer's character-cell coordinates.
+
+dwButtonState
+The status of the mouse buttons. The least significant bit corresponds to the leftmost mouse button. The next least significant bit corresponds to the rightmost mouse button. The next bit indicates the next-to-leftmost mouse button. The bits then correspond left to right to the mouse buttons. A bit is 1 if the button was pressed.
+
+The following constants are defined for the first five mouse buttons.
