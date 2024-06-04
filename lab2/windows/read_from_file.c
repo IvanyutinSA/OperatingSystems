@@ -44,5 +44,6 @@ int main()
     ReadFile(f3, buffer+14, 7, &len, NULL);
     WriteFile(hout, buffer+14, 7, NULL, NULL);
     putchar('\n');
+    getchar();
 }
 

@@ -18,8 +18,8 @@ int main()
     if (hout == INVALID_HANDLE_VALUE) 
         return 1;
 
-    printf("standard input: %d\n", (int) STD_INPUT_HANDLE);
-    printf("standard output: %d\n", (int) STD_OUTPUT_HANDLE);
+    printf("standard input: %lu\n", hin);
+    printf("standard output: %lu\n", hout);
     fflush(stdout);
 
     WriteFile(hout, "Enter the text\n", 15, NULL, NULL);
